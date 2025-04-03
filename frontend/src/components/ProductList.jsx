@@ -45,7 +45,7 @@ function ProductList() {
     try {
       await deleteProduct(productToDelete.id)
       alert('Xóa sản phẩm thành công!')
-      fetchProducts() // Refresh the list
+      fetchProducts()
       handleCloseDeleteModal()
     } catch (err) {
       console.error('Lỗi khi xóa sản phẩm:', err)

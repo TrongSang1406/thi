@@ -9,7 +9,6 @@ function ProductForm({ initialValues, onSubmit, submitButtonText, loading }) {
   })
   const [errors, setErrors] = useState({})
 
-  // Cập nhật form khi có dữ liệu initialValues (cho trường hợp edit)
   useEffect(() => {
     if (initialValues) {
       setFormData(initialValues)
@@ -49,7 +48,6 @@ function ProductForm({ initialValues, onSubmit, submitButtonText, loading }) {
     e.preventDefault()
     
     if (validateForm()) {
-      // Chuyển đổi giá thành số
       const productData = {
         ...formData,
         price: parseFloat(formData.price)
